@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Bellow.Client": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false,
+      "authenticationMode": "None"
+    }
+  }
+}

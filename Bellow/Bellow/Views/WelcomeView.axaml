@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Bellow.Client.Views.WelcomeView">
+  
+  <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" Margin="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+      
+      <TextBlock Text="Welcome!"  FontSize="30" FontWeight="Medium" Margin ="15"/>
+      
+      <StackPanel Orientation="Horizontal" Grid.Row="1" Spacing="10" Margin="0,5" IsVisible="{Binding !Connected}">
+          <TextBlock Text="Server URL:" MinWidth="120" TextAlignment="Right" VerticalAlignment="Center"/>
+          <TextBox Text="{Binding ServerUrl}" MinWidth="250" Watermark="https://localhost:5001/" VerticalAlignment="Center"/>
+          <Button Content="Connect" Command="{Binding ConnectCommand}" VerticalAlignment="Center"/>
+      </StackPanel>
+      
+      <StackPanel Orientation="Horizontal" Grid.Row="2" Spacing="10" Margin="0,5" IsVisible="{Binding Connected}">
+          <TextBlock Text="Username:" MinWidth="120" TextAlignment="Right" VerticalAlignment="Center"/>
+          <TextBox Text="{Binding Username}" MinWidth="250" VerticalAlignment="Center"/>
+      </StackPanel>
+      
+      <StackPanel Orientation="Horizontal" Grid.Row="3" Spacing="10" Margin="0,5" IsVisible="{Binding Connected}"> 
+          <TextBlock Text="Passcode:" MinWidth="120" TextAlignment="Right" VerticalAlignment="Center"/>
+          <TextBox Text="{Binding Passcode}" MinWidth="250" PasswordChar="*" VerticalAlignment="Center"/>
+      </StackPanel>
+      
+      <StackPanel Orientation="Horizontal" Grid.Row="4" Spacing="10" Margin="0,8" HorizontalAlignment="Right" IsVisible="{Binding Connected}">
+         <Button Content="Register" Command="{Binding RegisterCommand}"/>
+         <Button Content="Login" Command="{Binding LoginCommand}"/>
+      </StackPanel>
+      
+  </Grid>
+  
+</UserControl>
