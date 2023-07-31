@@ -14,6 +14,8 @@ namespace Bellow.Server.Services
 {
     /// <summary>
     /// 
+    /// TDLR: Don't copy this. It's not demonstrating anything other than stupidity.
+    /// 
     ///                                         !HERE BE DRAGONS! 
     ///                                           !PLEASE READ!
     /// 
@@ -34,11 +36,9 @@ namespace Bellow.Server.Services
     /// It was written to fake a critical piece of a system to allow me to focus on the main demo. I decided to forgo using a real auth provider because
     /// I didn't want to read and digest the necessary documentation to consume a real service. 
     /// In a caffeine-induced state of delirium, creating this horror seems like the logical decision. 
-    /// Don't adopt this dragon thinking it can be tamed. It'll always been a beast and you're going to get burnt. 
-
-    /// So don't say you've not been warned. 
+    /// Don't adopt this dragon thinking it can be tamed. It'll always been a beast and you're going to get burnt.
     /// 
-    /// TDLR: Don't copy this. It's not demonstrating anything other than stupidity.
+    /// So don't say you've not been warned. 
     /// </summary>
 
     public class UserService
